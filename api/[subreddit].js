@@ -20,9 +20,9 @@ export default async function handler(req) {
       headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
     });
   } catch {
-    return new Response(JSON.stringify({ error: 'Non-JSON response', status: response.status }), {
-      status: 502,
-      headers: { 'Content-Type': 'application/json' },
+    return new Response(text, {
+      status: response.status,
+      headers: { 'Content-Type': 'text/plain', 'Access-Control-Allow-Origin': '*' },
     });
   }
 }
