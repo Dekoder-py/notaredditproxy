@@ -3,7 +3,7 @@ export default async function handler(req, res) {
 
   try {
     const response = await fetch(`https://www.reddit.com/r/${subreddit}.json`, {
-      headers: { 'User-Agent': 'reddit-proxy/1.0' },
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; RedditProxy/1.0)' },
     });
 
     const text = await response.text();
